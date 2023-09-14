@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooDemo1", "PooDemo1\PooDemo1.csproj", "{2207FE43-9A2C-4ED0-BCE8-C78041386129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroesApp", "SuperHeroesApp\SuperHeroesApp.csproj", "{07F1B84F-3852-4D91-A122-A863AB214169}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2207FE43-9A2C-4ED0-BCE8-C78041386129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2207FE43-9A2C-4ED0-BCE8-C78041386129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2207FE43-9A2C-4ED0-BCE8-C78041386129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2207FE43-9A2C-4ED0-BCE8-C78041386129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07F1B84F-3852-4D91-A122-A863AB214169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F1B84F-3852-4D91-A122-A863AB214169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F1B84F-3852-4D91-A122-A863AB214169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F1B84F-3852-4D91-A122-A863AB214169}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E14EEDA-EF69-484F-8996-2B4DCAE5E844}
+	EndGlobalSection
+EndGlobal

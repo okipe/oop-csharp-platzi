@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperHeroesApp.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace SuperHeroesApp.Models
 {
-    class SuperHero
+    class SuperHero : Hero, ISuperHero // ISuperHero es una interface. Acá está al costado del padre Hero
     {
         private string _Name;
-        public int Id;
+        public int Id { get; set; } = 1;
         // Encapsulamos el Name
-        public string Name
-        {   get { return _Name; } // retorn del nombre sin modificar.
+        public override string Name // Como la clase padre usa abstract, estamos poniendo un "override"
+        {   get { return _Name; } // return del nombre sin modificar.
             set { _Name = value.Trim(); }  // el Value es variable reservada. Permite evitar los errores de añadir espacios gracias a Trim
         }
 
@@ -21,7 +22,7 @@ namespace SuperHeroesApp.Models
             get { return $"{Name} ({SecretIdentity})"; }
         }
 
-        public string SecretIdentity;
+        public string SecretIdentity { get; set; }
         public string City;
         public List<SuperPower> SuperPowers;
         public bool CanFly;
@@ -43,6 +44,17 @@ namespace SuperHeroesApp.Models
             }
 
             return sb.ToString();
+        }
+
+        public override string ToSaveTheWorld()
+        {
+            return $"{NameAndSecretIdentity} ha salvado el mundo";
+        }
+
+        public override string ToSaveTheEarth()
+        {
+            // return base.ToSaveTheEarth();
+            return $"{NameAndSecretIdentity} ha salvado la tierra.";
         }
     }
 }

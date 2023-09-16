@@ -1,7 +1,11 @@
 ﻿using System.Text;
+using SuperHeroesApp;
 using SuperHeroesApp.Models;
 
 Console.WriteLine("Superheros information");
+
+var printInfo = new PrintInfo();
+
 
 var canFly = new SuperPower();
 canFly.Name = "Volar";
@@ -30,6 +34,9 @@ superman.Id = 1;
 superman.Name = "Superman ";
 superman.SecretIdentity = "Clark Ken";
 superman.City = "Metropolis";
+superman.CanFly = true;
+
+printInfo.PrintSuperHero(superman);
 
 List<SuperPower> powersSuperman = new List<SuperPower>();
 powersSuperman.Add(canFly);
@@ -38,14 +45,21 @@ superman.SuperPowers = powersSuperman;
 // superman.ToUseSuperPower(); 
 string resultSuperPowers = superman.ToUseSuperPower();
 Console.WriteLine(resultSuperPowers);
+string resultSaveToWorld = superman.ToSaveTheWorld();
+Console.WriteLine(resultSaveToWorld);
+
+string resultSaveTheEarth = superman.ToSaveTheEarth();
+Console.WriteLine(resultSaveTheEarth);
 
 // Professor X (marvil) hero
 var professorX = new SuperHero();
 
 professorX.Id = 2;
-professorX.Name = "Yuri";
+professorX.Name = "Professor X";
 professorX.SecretIdentity = "Charles Xavier";
 professorX.City = "New York City";
+
+printInfo.PrintSuperHero(professorX);
 
 List<SuperPower> powersProfessorX = new List<SuperPower>();
 powersProfessorX.Add(mindControl);
@@ -57,6 +71,8 @@ wolverine.Id = 5;
 wolverine.Name = "Wolverine";
 wolverine.SecretIdentity = "Logan Howlett";
 wolverine.CanFly = false;
+
+printInfo.PrintSuperHero(wolverine);
 
 List<SuperPower> powersWolverine = new List<SuperPower>();
 powersWolverine.Add(regeneration);
